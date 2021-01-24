@@ -94,5 +94,38 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="maison.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="parametres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="teacher %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="businesswoman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="woman %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="graduation-hat %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="plus %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
