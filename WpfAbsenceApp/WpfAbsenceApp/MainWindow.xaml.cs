@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
 
 namespace WpfAbsenceApp
 {
@@ -23,6 +24,23 @@ namespace WpfAbsenceApp
         public MainWindow()
         {
             InitializeComponent();
+        }
+        ADO d = new ADO();
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            d.CONNECTER();
+            d.cmd.CommandText = "select * from ";
+            d.cmd.Connection = d.con;
+            d.dr = d.cmd.ExecuteReader();
+            d.dt.Load(d.dr);
+            /*DataGrid_SelectionChanged.DataSource = d.dt;*/
+            d.dr.Close();
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -59,6 +59,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="ADO.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -93,6 +94,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="maison.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="parametres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="graduation-hat %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="woman %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="unknown.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
