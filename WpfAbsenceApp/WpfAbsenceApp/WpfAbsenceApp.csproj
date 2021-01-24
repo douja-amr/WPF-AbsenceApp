@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FEDA0CD3-CD9A-498D-8385-3D7DE08D6E52}</ProjectGuid>
+    <ProjectGuid>{93E0E75A-42F1-40A5-9E64-8A777E214A88}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>WpfAbsenceApp</RootNamespace>
     <AssemblyName>WpfAbsenceApp</AssemblyName>
@@ -93,36 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Dashboard.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="education-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="eduction-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Sans titre - 1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="5920 [Converti].png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="notes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="note1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="edu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="circle-cropped %284%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="loupe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
