@@ -1,0 +1,4 @@
+C:\Users\Youcode\Desktop\Les briefs\WPF-AbsenceApp\WpfAbsenceApp\WpfAbsenceApp\obj\Release\MainWindow.g.cs
+C:\Users\Youcode\Desktop\Les briefs\WPF-AbsenceApp\WpfAbsenceApp\WpfAbsenceApp\obj\Release\App.g.cs
+C:\Users\Youcode\Desktop\Les briefs\WPF-AbsenceApp\WpfAbsenceApp\WpfAbsenceApp\obj\Release\WpfAbsenceApp_MarkupCompile.cache
+C:\Users\Youcode\Desktop\Les briefs\WPF-AbsenceApp\WpfAbsenceApp\WpfAbsenceApp\obj\Release\WpfAbsenceApp_MarkupCompile.lref
