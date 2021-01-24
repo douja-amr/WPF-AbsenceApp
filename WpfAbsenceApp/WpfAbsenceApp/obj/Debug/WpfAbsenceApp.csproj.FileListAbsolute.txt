@@ -1,5 +1,0 @@
-C:\Users\Youcode\Desktop\Les briefs\WPF-AbsenceApp\WpfAbsenceApp\WpfAbsenceApp\obj\Debug\WpfAbsenceApp.csprojAssemblyReference.cache
-C:\Users\Youcode\Desktop\Les briefs\WPF-AbsenceApp\WpfAbsenceApp\WpfAbsenceApp\obj\Debug\MainWindow.g.cs
-C:\Users\Youcode\Desktop\Les briefs\WPF-AbsenceApp\WpfAbsenceApp\WpfAbsenceApp\obj\Debug\App.g.cs
-C:\Users\Youcode\Desktop\Les briefs\WPF-AbsenceApp\WpfAbsenceApp\WpfAbsenceApp\obj\Debug\WpfAbsenceApp_MarkupCompile.cache
-C:\Users\Youcode\Desktop\Les briefs\WPF-AbsenceApp\WpfAbsenceApp\WpfAbsenceApp\obj\Debug\WpfAbsenceApp_MarkupCompile.lref
