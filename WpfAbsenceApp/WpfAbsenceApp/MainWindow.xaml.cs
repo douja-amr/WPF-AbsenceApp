@@ -45,6 +45,7 @@ namespace WpfAbsenceApp
         private void butFormateur_Click(object sender, RoutedEventArgs e)
         {
             DataGrid.Visibility = Visibility.Visible;
+            butAjouter.Visibility = Visibility.Visible;
             txtFullname.Visibility = Visibility.Hidden;
             txtEmail.Visibility = Visibility.Hidden;
             txtPassword.Visibility = Visibility.Hidden;
@@ -59,11 +60,8 @@ namespace WpfAbsenceApp
             lblDateNaissance.Visibility = Visibility.Hidden;
             lblClasse.Visibility = Visibility.Hidden;
             lblFourmateur.Visibility = Visibility.Hidden;
+            butEnregister.Visibility = Visibility.Hidden;
 
-            /*if (DataGrid != null)
-            {
-                DataGrid.Items.Clear();
-            }*/
             d.CONNECTER();
             d.cmd.CommandText = ("select * from Formateur ");
             d.cmd.Connection = d.con;
@@ -71,6 +69,10 @@ namespace WpfAbsenceApp
             d.dt.Load(d.dr);
             DataGrid.ItemsSource = d.dt.DefaultView;
             d.dr.Close();
+
+
+
+
         }
 
         private void butSecrétaire_Click(object sender, RoutedEventArgs e)
@@ -97,18 +99,17 @@ namespace WpfAbsenceApp
             txtFullname.Visibility = Visibility.Visible;
             txtEmail.Visibility = Visibility.Visible;
             txtPassword.Visibility = Visibility.Visible;
-            txtDateNaissance.Visibility = Visibility.Visible;
             txtClasse.Visibility = Visibility.Visible;
-            txtFormateur.Visibility = Visibility.Visible;
             txtRoleld.Visibility = Visibility.Visible;
             lblFullname.Visibility = Visibility.Visible;
             lblEmail.Visibility = Visibility.Visible;
             lblPassword.Visibility = Visibility.Visible;
             lblRoleId.Visibility = Visibility.Visible;
-            lblDateNaissance.Visibility = Visibility.Visible;
             lblClasse.Visibility = Visibility.Visible;
-            lblFourmateur.Visibility = Visibility.Visible;
-
+            txtAnnée.Visibility = Visibility.Visible;
+            lblAnnée.Visibility = Visibility.Visible;
+            butEnregister.Visibility = Visibility.Visible;
+            butAjouter.Visibility = Visibility.Visible;
 
 
         }
@@ -151,7 +152,7 @@ namespace WpfAbsenceApp
         
 
         private void txtRoleld_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        {/*
             txtRoleld.Items.Clear();
             d.cmd.CommandText = ("select * from Role");
             d.cmd.Connection = d.con;
@@ -161,7 +162,7 @@ namespace WpfAbsenceApp
                 txtRoleld.Items.Add(d.dr[0]);
             }
             
-            d.dr.Close();
+            d.dr.Close();*/
         }
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
@@ -172,6 +173,26 @@ namespace WpfAbsenceApp
         private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
         {
 
+        }
+        // Remplir de datagid
+
+        public void RemplirGrid()
+        {
+            d.cmd.CommandText = "select * form Formateur";
+            d.cmd.Connection = d.con;
+            d.dr = d.cmd.ExecuteReader();
+            d.dt.Load(d.dr);
+            DataGrid.ItemsSource = d.dt.DefaultView;
+            d.dr.Close();
+        }
+
+        private void butEnregister_Click(object sender, RoutedEventArgs e)
+        {
+            d.CONNECTER();
+            d.cmd = new SqlCommand(" insert into Formateur (Fullname,email,password,Année) values ('" + txtFullname.Text + "','" + txtEmail.Text + "','" + txtPassword.Text + "'," + txtAnnée.Text + ")", d.con);
+            d.cmd.Connection = d.con;
+            d.cmd.ExecuteNonQuery();
+            d.con.Close();
         }
     }
 }
