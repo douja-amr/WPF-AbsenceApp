@@ -13,6 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using HandyControl.Data;
+using HandyControl.Themes;
+using HandyControl.Tools;
+using System.Windows.Markup;
 
 namespace WpfAbsenceApp
 {
@@ -27,18 +31,145 @@ namespace WpfAbsenceApp
         }
         ADO d = new ADO();
 
-        private void Form1_Load(object sender, EventArgs e)
+
+        private void DataGrid_Loaded(object sender, RoutedEventArgs e)
         {
+           
+        }
+
+        private void butDashboard_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void butFormateur_Click(object sender, RoutedEventArgs e)
+        {
+            DataGrid.Visibility = Visibility.Visible;
+            txtFullname.Visibility = Visibility.Hidden;
+            txtEmail.Visibility = Visibility.Hidden;
+            txtPassword.Visibility = Visibility.Hidden;
+            txtDateNaissance.Visibility = Visibility.Hidden;
+            txtClasse.Visibility = Visibility.Hidden;
+            txtFormateur.Visibility = Visibility.Hidden;
+            txtRoleld.Visibility = Visibility.Hidden;
+            lblFullname.Visibility = Visibility.Hidden;
+            lblEmail.Visibility = Visibility.Hidden;
+            lblPassword.Visibility = Visibility.Hidden;
+            lblRoleId.Visibility = Visibility.Hidden;
+            lblDateNaissance.Visibility = Visibility.Hidden;
+            lblClasse.Visibility = Visibility.Hidden;
+            lblFourmateur.Visibility = Visibility.Hidden;
+
+            /*if (DataGrid != null)
+            {
+                DataGrid.Items.Clear();
+            }*/
             d.CONNECTER();
-            d.cmd.CommandText = "select * from ";
+            d.cmd.CommandText = ("select * from Formateur ");
             d.cmd.Connection = d.con;
             d.dr = d.cmd.ExecuteReader();
             d.dt.Load(d.dr);
-            /*DataGrid_SelectionChanged.DataSource = d.dt;*/
+            DataGrid.ItemsSource = d.dt.DefaultView;
             d.dr.Close();
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void butSecrétaire_Click(object sender, RoutedEventArgs e)
+        {
+            DataGrid.Visibility = Visibility.Visible;
+            d.CONNECTER();
+            d.cmd.CommandText = ("select * from Secretaire");
+            d.cmd.Connection = d.con;
+            d.dr = d.cmd.ExecuteReader();
+            d.dt.Load(d.dr);
+            DataGrid.ItemsSource = d.dt.DefaultView;
+            d.dr.Close();
+
+        }
+
+        private void butApprenants_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void butAjouter_Click(object sender, RoutedEventArgs e)
+        {
+            DataGrid.Visibility = Visibility.Hidden;
+            txtFullname.Visibility = Visibility.Visible;
+            txtEmail.Visibility = Visibility.Visible;
+            txtPassword.Visibility = Visibility.Visible;
+            txtDateNaissance.Visibility = Visibility.Visible;
+            txtClasse.Visibility = Visibility.Visible;
+            txtFormateur.Visibility = Visibility.Visible;
+            txtRoleld.Visibility = Visibility.Visible;
+            lblFullname.Visibility = Visibility.Visible;
+            lblEmail.Visibility = Visibility.Visible;
+            lblPassword.Visibility = Visibility.Visible;
+            lblRoleId.Visibility = Visibility.Visible;
+            lblDateNaissance.Visibility = Visibility.Visible;
+            lblClasse.Visibility = Visibility.Visible;
+            lblFourmateur.Visibility = Visibility.Visible;
+
+
+
+        }
+
+        private void txtFullname_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void lblRoleld_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtClasse_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtRoleld_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        
+
+        private void txtRoleld_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            txtRoleld.Items.Clear();
+            d.cmd.CommandText = ("select * from Role");
+            d.cmd.Connection = d.con;
+            d.dr = d.cmd.ExecuteReader();
+            while (d.dr.Read())
+            {
+                txtRoleld.Items.Add(d.dr[0]);
+            }
+            
+            d.dr.Close();
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
         {
 
         }
