@@ -292,6 +292,14 @@ namespace WpfAbsenceApp {
         #line default
         #line hidden
         
+        
+        #line 170 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button butVider;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -483,6 +491,9 @@ namespace WpfAbsenceApp {
             
             #line default
             #line hidden
+            return;
+            case 31:
+            this.butVider = ((System.Windows.Controls.Button)(target));
             return;
             }
             this._contentLoaded = true;
